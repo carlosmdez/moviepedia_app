@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:moviepedia_app/router/app_router.dart';
-import 'package:moviepedia_app/screens/home/home_screen.dart';
-import 'package:moviepedia_app/theme/app_theme.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+import 'package:moviepedia_app/config/router/app_router.dart';
+import 'package:moviepedia_app/config/theme/app_theme.dart';
+
+Future<void> main() async {
+  await dotenv.load(fileName: ".env");
   runApp(const MainApp());
 }
 
